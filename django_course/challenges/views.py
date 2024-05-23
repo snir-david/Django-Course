@@ -1,4 +1,4 @@
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404, HttpResponseNotFound, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.template.loader import render_to_string
@@ -34,4 +34,4 @@ def month_handler_str(requset, month):
             "month_challenge":challenge_text
         })
     except:
-        return HttpResponseNotFound(f"{month} str month Not Supported!")
+        raise Http404()
