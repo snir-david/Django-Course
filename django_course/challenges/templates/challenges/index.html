@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-    {% block title %}Doc{% endblock title %}
+{% load static  %}
+
+{% block title %}Doc{% endblock title %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "challenges\challenges.css" %}">
+{% endblock css_files %}
 {% block content %}
     <h1>All Challenges </h1>
     <ul>
